@@ -28,7 +28,6 @@ void quick_sort(int *arr,int n){
                 if(p+1==separator){
                     swap(p,separator);
                     separator--;
-                    p++;
                 }
                 else{
                     int temp=*separator;
@@ -39,7 +38,7 @@ void quick_sort(int *arr,int n){
                 }
             }
         }
-        if(separator==p)p++;
+        p++;
         quick_sort(arr,separator-arr);
         quick_sort(p,n-(separator-arr)-1);
     }
