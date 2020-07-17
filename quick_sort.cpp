@@ -12,15 +12,18 @@ void quick_sort(int *arr,int n){
    if(n<=1){
        return;
    }
-   else if(n==2){             
+   else if(n==2){             //if array size is 2 swap if neccessary
         if(arr[0]<arr[1]){
             return;
         }
         swap(arr,arr+1);
     }
     else{
+	//reshape the array so that 
+	//every number that is smaller then the separator is on the left side of the separator
+	//and every number that is bigger then the separator is on the right side of the separator
         int *separator=arr+n-1,*p;
-        for(p=arr;p<separator;){
+        for(p=arr;p<separator;){	
             if(*p<=*separator){
                 p++;
             }
@@ -39,8 +42,8 @@ void quick_sort(int *arr,int n){
             }
         }
         p++;
-        quick_sort(arr,separator-arr);
-        quick_sort(p,n-(separator-arr)-1);
+        quick_sort(arr,separator-arr);		//sort left half of the array recursively
+        quick_sort(p,n-(separator-arr)-1);	//sort right half of the array recursively
     }
 }
 
@@ -52,9 +55,9 @@ void print_array(int *arr,int n){
 int main()
 {
     int n;
-    cin>>n;
+    cin>>n;					//enter array size
     int array[n];
-    for(int *i=array;i<array+n;i++)cin>>*i;
+    for(int *i=array;i<array+n;i++)cin>>*i;	//enter array
     quick_sort(array,n);
     print_array(array,n);
 }
