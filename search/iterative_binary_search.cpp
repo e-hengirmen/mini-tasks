@@ -15,7 +15,7 @@ int Iterative_Binary_Search(int *arr,int n,int k){
         }
     }
     if(k==*lower)return lower-arr+1;
-    return -1;
+    return -1;                               //-1 means that the array does not contain searched number
 
 }
 
@@ -23,7 +23,7 @@ int Iterative_Binary_Search(int *arr,int n,int k){
 
 int main(){
     int n,k,result,sum=0;
-    std::cin>>n>>k;                             //entering array size and number to be searched in the right order
+    std::cin>>n>>k;                          //entering array size and number to be searched in the right order
     int a[n];
     for(int *i=a;i<a+n;i++)std::cin>>*i;     //entering array
     std::sort(a,a+n);                        //sorting using STL libraries because this implementation is about searching
