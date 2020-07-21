@@ -16,10 +16,10 @@ void Heapify(int *arr,int now){
     }
 }
 
-void Create_Max_Heap(int *arr,int n,int now){
-    if(now==n)return;
-    Heapify(arr,now);
-    Create_Max_Heap(arr,n,now+1);
+void Create_Max_Heap(int *arr,int n){
+    for(int i=1;i<n;i++){
+        Heapify(arr,i);
+    }
 }
 
 void print_array(int *arr,int n){
@@ -29,11 +29,11 @@ void print_array(int *arr,int n){
 
 int main(){
     int n,result;
-    std::cin>>n;                           //entering array size and number to be searched in the right order
+    std::cin>>n;                            //entering array size and number to be searched in the right order
     int a[n];
-    for(int *i=a;i<a+n;i++)std::cin>>*i;     //entering array
+    for(int *i=a;i<a+n;i++)std::cin>>*i;    //entering array
     
-    Create_Max_Heap(a,n,1);
+    Create_Max_Heap(a,n);
     swap(a,a+n-1);
 
     for(int i=n-1;i>1;i--){
