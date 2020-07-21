@@ -5,7 +5,7 @@ Contains merge sort implementation written in C++
 Contains quick sort implementation written in C++
 ## [heap_sort.cpp](https://github.com/e-hengirmen/mini-tasks/blob/master/sort/heap_sort.cpp)
 Contains heap sort implementation written in C++
-# Search Implementations
+# Search Algorithm Implementations
 ## [binary_search.cpp](https://github.com/e-hengirmen/mini-tasks/blob/master/search/binary_search.cpp)
 Contains binary search implementation written in C++
 ## [iterative_binary_search.cpp](https://github.com/e-hengirmen/mini-tasks/blob/master/search/iterative_binary_search.cpp)
