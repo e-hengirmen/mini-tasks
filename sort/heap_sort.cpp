@@ -1,6 +1,6 @@
 #include <iostream>
 
-/*this implementation uses an array instead of data structures because more efficient*/
+/*this implementation uses an array instead of data structures because this is more efficient*/
 
 void swap(int *a,int *b){
     int temp=*a;
