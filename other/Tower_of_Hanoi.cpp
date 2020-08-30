@@ -21,7 +21,7 @@ int main()
 
     solve(stack);
 
-    std::cout<<"LAST STATE"<<std::endl;
+    std::cout<<"FINAL STATE"<<std::endl;
     print_tower(stack);
 }
 
@@ -36,7 +36,11 @@ void solve(std::vector<int>*stack){
 }
 
 void move_all(std::vector<int>*stack,int from,int to,int how_many){
-    if(how_many>0){
+    if(how_many==1){
+        move(stack,from,to);
+        print_tower(stack);
+    }
+    else if(how_many>0){
         int third_loc=3-from-to;
         move_all(stack,from,third_loc,how_many-1);
         move(stack,from,to);
