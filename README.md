@@ -10,3 +10,6 @@ Contains heap sort implementation written in C++
 Contains binary search implementation written in C++
 ## [iterative_binary_search.cpp](https://github.com/e-hengirmen/mini-tasks/blob/master/search/iterative_binary_search.cpp)
 Contains iterative binary search implementation written in C++
+# Other Algorithm Implementations
+## [Tower_of_Hanoi.cpp](https://github.com/e-hengirmen/mini-tasks/blob/master/other/Tower_of_Hanoi.cpp)
+Contains implementation of Tower of Hanoi written in C++
